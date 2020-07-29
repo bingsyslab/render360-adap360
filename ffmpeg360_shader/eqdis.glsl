@@ -13,4 +13,3 @@ void main(void)
     mediump vec2 uv = ex_uv.rg;
     out_Color = texture(textureSampler, uv).r;
 }
-
