@@ -1,6 +1,8 @@
 # Render360
 Render360 is a tool we created for rendering 360-degree images and videos based on the user's head orientation. It can take input videos encoded using not only a variety of non-adaptive projections, but also the adaptive AdaP-360 projections. It allow researchers to encode the rendered views into "view videos" using lossless encoding, and compare the true visual qualities using the popular objective measurements. 
 
+Details can be found in our paper: **AdaP-360: User-Adaptive Area-of-Focus Projections for Bandwidth-Efficient 360-Degree Video Streaming** [[paper](https://dl.acm.org/doi/10.1145/3394171.3413521)].
+
 # How to compile
 ## Mac instructions
 ```
@@ -80,4 +82,15 @@ For example, a sample command can look like the follows:
 
 ```
 $ ./ffmpeg -loglevel 'info' -y -i test-barrel.mp4 -filter:v "project=800:800:90:90:0:180:0:simpleVertex.glsl:barrel-render.glsl::equirectangular.lt:0.0:1.0" barrel-back.mp4
+```
+
+# Citation
+```
+@inproceedings{zhou2020adap,
+  title={Adap-360: User-adaptive area-of-focus projections for bandwidth-efficient 360-degree video streaming},
+  author={Zhou, Chao and Wang, Shuoqian and Xiao, Mengbai and Wei, Sheng and Liu, Yao},
+  booktitle={Proceedings of the 28th ACM International Conference on Multimedia},
+  pages={3715--3723},
+  year={2020}
+}
 ```
